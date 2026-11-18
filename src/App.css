@@ -643,3 +643,16 @@ body {
   /* Evita deformações. */
   object-fit: contain;
 }
+
+
+/* ==========================================
+   TAMANHO DO CELULAR — PÁGINA INÍCIO
+========================================== */
+
+/* Reduz a imagem do celular sem distorcer. */
+.inicio-celular img {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
