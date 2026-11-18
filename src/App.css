@@ -1,0 +1,645 @@
+
+/* ========================================
+   GERENCIACÃO — ESTILOS DA LANDING PAGE
+======================================== */
+
+/* Define a largura principal do site. */
+.site {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+/* Organiza a logo e o menu na horizontal. */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 7%;
+}
+
+/* Remove o estilo padrão do botão da logo. */
+.botao-logo {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Define o tamanho da logo do projeto. */
+.botao-logo img {
+  display: block;
+  width: 135px;
+  height: auto;
+}
+
+/* Organiza as opções do menu. */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Aparência padrão das opções do menu. */
+.menu button {
+  background: transparent;
+  border: none;
+  color: #191919;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Destaca a página que está selecionada. */
+.menu button.ativo {
+  color: #e9951c;
+}
+
+/* Altera a cor ao passar o mouse. */
+.menu button:hover {
+  color: #e9951c;
+}
+
+/* ========================================
+   TELA INICIAL
+======================================== */
+
+/* Divide a tela em duas colunas:
+   uma para o texto e outra para o celular. */
+.inicio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 600px;
+  padding: 0 7%;
+  overflow: hidden;
+}
+
+/* Organiza o título e o botão verticalmente. */
+.inicio-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+/* Define a aparência do slogan principal. */
+.inicio-texto h1 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  color: #191919;
+}
+
+/* Destaca a expressão "tantas vidas". */
+.inicio-texto h1 span {
+  color: #e9951c;
+}
+
+/* Aparência do botão de experimentar. */
+.botao-teste {
+  background: #191919;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Efeito visual ao passar o mouse no botão. */
+.botao-teste:hover {
+  background: #e9951c;
+}
+
+/* Posiciona o celular na coluna direita. */
+.inicio-celular {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Configura o tamanho da imagem do celular.
+   object-fit evita distorcer suas proporções. */
+.inicio-celular img {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ========================================
+   PÁGINAS PROVISÓRIAS
+======================================== */
+
+/* Área temporária das páginas futuras. */
+.pagina-provisoria {
+  min-height: 500px;
+  padding: 100px 7%;
+}
+
+/* Títulos das páginas provisórias. */
+.pagina-provisoria h1 {
+  color: #191919;
+  font-size: 44px;
+}
+
+/* Descrição temporária das páginas. */
+.pagina-provisoria p {
+  color: #777777;
+  font-size: 18px;
+}
+
+/* ========================================
+   RESPONSIVIDADE — CELULARES
+======================================== */
+
+/* Aplica novos estilos em telas de até 768px. */
+@media (max-width: 768px) {
+
+  /* Empilha a logo e o menu. */
+  .cabecalho {
+    flex-direction: column;
+    height: auto;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  /* Permite que o menu quebre linhas. */
+  .menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* Transforma as duas colunas em uma. */
+  .inicio {
+    grid-template-columns: 1fr;
+    padding: 48px 24px 0;
+    min-height: auto;
+    gap: 40px;
+  }
+
+  /* Reduz o espaçamento do conteúdo. */
+  .inicio-texto {
+    gap: 30px;
+  }
+
+  /* Ajusta o tamanho do título. */
+  .inicio-texto h1 {
+    font-size: clamp(30px, 7vw, 42px);
+  }
+
+  /* Ajusta a imagem ao espaço disponível. */
+  .inicio-celular img {
+    max-width: 430px;
+  }
+}
+
+
+/* ==========================================
+   SEQUÊNCIA DE TELAS DO APLICATIVO
+========================================== */
+
+/* Agrupa todas as etapas apresentadas na rolagem. */
+.sequencia-aplicativo {
+  width: 100%;
+}
+
+/* Cada etapa ocupa uma área grande da página,
+   seguindo o conceito dos frames do Figma. */
+.etapa-aplicativo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  min-height: 650px;
+  padding: 60px 7%;
+
+  background-color: #ffad1f;
+  overflow: hidden;
+}
+
+/* Alterna suavemente a tonalidade do fundo
+   para distinguir as diferentes etapas. */
+.etapa-aplicativo:nth-child(even) {
+  background-color: #ffb52f;
+}
+
+/* Organiza os textos à esquerda do celular. */
+.etapa-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 24px;
+  max-width: 480px;
+}
+
+/* Estiliza o título da etapa. */
+.etapa-texto h2 {
+  margin: 0;
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+
+  color: #191919;
+}
+
+/* Estiliza a descrição da funcionalidade. */
+.etapa-texto p {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  color: #392814;
+}
+
+/* Centraliza o celular na coluna direita. */
+.etapa-imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mantém a proporção original do mockup. */
+.etapa-imagem img {
+  display: block;
+
+  width: 100%;
+  max-width: 360px;
+  max-height: 540px;
+
+  object-fit: contain;
+}
+
+/* ==========================================
+   ADAPTAÇÃO PARA DISPOSITIVOS MÓVEIS
+========================================== */
+
+@media (max-width: 768px) {
+
+  /* Empilha texto e imagem em telas pequenas. */
+  .etapa-aplicativo {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 40px;
+    padding: 65px 24px;
+  }
+
+  /* Ajusta o tamanho dos títulos no celular. */
+  .etapa-texto h2 {
+    font-size: 34px;
+  }
+
+  /* Ajusta o tamanho dos textos descritivos. */
+  .etapa-texto p {
+    font-size: 16px;
+  }
+
+  /* Limita a largura da imagem em telas pequenas. */
+  .etapa-imagem img {
+    max-width: 300px;
+  }
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE — ESTRUTURA DO SITE
+========================================== */
+
+@media (max-width: 768px) {
+
+  /* Organiza a tipografia e o menu em linhas separadas. */
+  .cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: auto;
+    min-height: 100px;
+    padding: 16px 5%;
+  }
+
+  /* Impede que a tipografia fique grande no celular. */
+  .cabecalho img {
+    max-width: 125px;
+    height: auto;
+  }
+
+  /* Distribui os links do menu e permite quebrar linha. */
+  .cabecalho nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px 14px;
+    width: 100%;
+  }
+
+  /* Deixa os links do menu fáceis de tocar. */
+  .cabecalho nav button {
+    min-height: 38px;
+    padding: 6px 2px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* INÍCIO: transforma o layout em coluna única. */
+  .inicio {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 48px 6% 0;
+    gap: 28px;
+    text-align: center;
+  }
+
+  /* Centraliza os elementos de texto do início. */
+  .inicio-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajusta o tamanho do slogan principal. */
+  .inicio-texto h1 {
+    font-size: clamp(32px, 9vw, 46px);
+    line-height: 1.15;
+  }
+
+  /* Mantém o celular ilustrativo centralizado. */
+  .inicio-celular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Impede que a imagem ultrapasse a tela. */
+  .inicio-celular img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Seções com as telas do aplicativo. */
+  .etapa-aplicativo {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 52px 6%;
+    gap: 30px;
+    text-align: center;
+  }
+
+  /* Ajusta os títulos das funcionalidades apresentadas. */
+  .etapa-texto h2 {
+    font-size: 29px;
+    line-height: 1.25;
+  }
+
+  /* Centraliza as telas ilustrativas. */
+  .etapa-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Limita as imagens das telas do aplicativo. */
+  .etapa-imagem img {
+    width: 100%;
+    max-width: 310px;
+    max-height: 460px;
+    object-fit: contain;
+  }
+}
+
+
+/* ==========================================
+   AJUSTES GERAIS — LARGURA TOTAL DO SITE
+========================================== */
+
+/* Remove eventuais limitações do elemento principal. */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+/* Evita que o body mantenha o alinhamento
+   centralizado do modelo inicial do Vite. */
+body {
+  display: block;
+}
+
+/* Permite que o site ocupe toda a largura da tela. */
+.site {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVIDADE — DESKTOP
+========================================== */
+
+/* Aplica os ajustes somente em telas maiores.
+   Assim, preservamos o layout mobile já desenvolvido. */
+@media (min-width: 901px) {
+
+  /* Mantém o cabeçalho alinhado e centralizado. */
+  .cabecalho {
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+  }
+
+  /* Faz a primeira seção preencher a área visível
+     abaixo do cabeçalho. */
+  .inicio {
+    min-height: calc(100svh - 100px);
+
+    /* Mantém texto e imagem lado a lado. */
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    /* Centraliza verticalmente o conteúdo. */
+    align-items: center;
+
+    /* Distância proporcional entre as colunas. */
+    gap: clamp(30px, 5vw, 90px);
+
+    /* Espaçamento adaptável às telas grandes. */
+    padding: 48px max(5%, calc((100% - 1360px) / 2));
+    box-sizing: border-box;
+  }
+
+  /* Ajusta o tamanho do slogan ao monitor. */
+  .inicio-texto h1 {
+    font-size: clamp(42px, 3.5vw, 64px);
+    line-height: 1.12;
+    max-width: 620px;
+  }
+
+  /* Centraliza a imagem do celular na coluna. */
+  .inicio-celular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+  }
+
+  /* Controla o tamanho da imagem conforme
+     a largura e a altura do monitor. */
+  .inicio-celular img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 72svh;
+    object-fit: contain;
+  }
+
+  /* Faz as seções laranjas ocuparem
+     a altura da tela e toda a largura disponível. */
+  .etapa-aplicativo {
+    min-height: 100svh;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+
+    gap: clamp(30px, 5vw, 90px);
+
+    padding: 70px max(5%, calc((100% - 1360px) / 2));
+    box-sizing: border-box;
+  }
+
+  /* Evita que textos fiquem largos demais. */
+  .etapa-texto {
+    max-width: 550px;
+  }
+
+  /* Organiza o espaço das imagens do aplicativo. */
+  .etapa-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  /* Adapta as telas do aplicativo à altura do monitor. */
+  .etapa-imagem img {
+    width: 100%;
+    max-width: 430px;
+    max-height: 75svh;
+    object-fit: contain;
+  }
+}
+
+/* ==========================================
+   AJUSTES — PÁGINAS CONTATO E EQUIPE
+========================================== */
+
+/* Mantém conteúdos de leitura centralizados
+   em telas muito largas. */
+.contato-pagina,
+.equipe-pagina {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   ESCALA PROPORCIONAL — DESKTOP
+========================================== */
+
+/* Aplica somente em computadores e telas grandes. */
+@media (min-width: 901px) {
+
+  /* Aumenta a tipografia da marca conforme o monitor. */
+  .cabecalho img {
+    width: clamp(145px, 10vw, 200px);
+    max-width: none;
+    height: auto;
+  }
+
+  /* Ajusta o tamanho dos links do menu. */
+  .cabecalho nav button {
+    font-size: clamp(13px, 0.85vw, 17px);
+    padding: 10px 8px;
+  }
+
+  /* Mantém o conteúdo principal distribuído. */
+  .inicio {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(40px, 5vw, 100px);
+  }
+
+  /* Faz o título crescer proporcionalmente. */
+  .inicio-texto h1 {
+    font-size: clamp(42px, 3.2vw, 64px);
+    line-height: 1.12;
+  }
+
+  /* Centraliza e dimensiona a área da imagem. */
+  .inicio-celular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Faz a imagem da mão crescer junto com o monitor. */
+  .inicio-celular img {
+    width: min(100%, 650px);
+    max-width: none;
+    max-height: 75svh;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Ajusta proporcionalmente o botão principal. */
+  .botao-teste {
+    font-size: clamp(14px, 0.9vw, 17px);
+    padding: 15px 28px;
+  }
+}
+
+
+/* Controla o tamanho da imagem no Início. */
+.inicio-celular img {
+  /* Define a largura máxima da imagem. */
+  width: 300px;
+
+  /* Impede que ultrapasse a largura disponível. */
+  max-width: 100%;
+
+  /* Mantém a proporção original da imagem. */
+  height: auto;
+
+  /* Evita deformações. */
+  object-fit: contain;
+}

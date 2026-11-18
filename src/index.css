@@ -1,0 +1,35 @@
+
+/* Importa a fonte Inter utilizada na landing page. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* Faz padding e bordas respeitarem as dimensões. */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margens padrão do navegador. */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+/* Define a aparência geral do site. */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #191919;
+}
+
+/* Faz os botões herdarem a fonte do site. */
+button {
+  font-family: inherit;
+}
+
+/* Destaca o foco ao navegar com teclado. */
+button:focus-visible {
+  outline: 3px solid #e9951c;
+  outline-offset: 4px;
+}

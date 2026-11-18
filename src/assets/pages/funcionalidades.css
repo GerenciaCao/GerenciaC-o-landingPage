@@ -1,0 +1,405 @@
+
+/* ==========================================
+   PÁGINA FUNCIONALIDADES — GERENCIACÃO
+========================================== */
+
+/* Área principal da página. */
+.funcionalidades-pagina {
+  width: 100%;
+  background: #ffffff;
+  color: #191919;
+}
+
+/* ==========================================
+   INTRODUÇÃO DA PÁGINA
+========================================== */
+
+/* Centraliza o título e a descrição inicial. */
+.funcionalidades-abertura {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 90px 6%;
+  text-align: center;
+}
+
+/* Pequeno texto acima dos títulos. */
+.funcionalidades-etiqueta {
+  color: #e9951c;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Título principal da página. */
+.funcionalidades-abertura h1 {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+/* Destaque laranja dos títulos. */
+.funcionalidades-abertura h1 span,
+.funcionalidades-recursos h2 span,
+.funcionalidades-encerramento h2 span {
+  color: #e9951c;
+}
+
+/* Texto de apresentação. */
+.funcionalidades-abertura p {
+  max-width: 720px;
+  margin: 0;
+  color: #686868;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   SEÇÕES AMARELAS COM IMAGENS
+========================================== */
+
+/* Faz o fundo amarelo ocupar toda a tela. */
+.funcionalidade-faixa {
+  width: 100%;
+  background: #ffad1f;
+}
+
+/* Mantém texto e imagem alinhados em duas colunas. */
+.funcionalidade-faixa-conteudo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 90px);
+
+  width: 100%;
+  max-width: 1280px;
+  min-height: 78svh;
+
+  margin: 0 auto;
+  padding: 65px clamp(24px, 4vw, 70px);
+}
+
+/* Organiza os textos da funcionalidade. */
+.funcionalidade-faixa-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  min-width: 0;
+}
+
+/* Identificação da funcionalidade. */
+.funcionalidade-categoria {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #6d4100;
+}
+
+/* Títulos das seções amarelas. */
+.funcionalidade-faixa-texto h2 {
+  max-width: 550px;
+  margin: 0;
+  font-size: clamp(35px, 3.4vw, 55px);
+  line-height: 1.13;
+  letter-spacing: -1px;
+}
+
+/* Descrições das telas apresentadas. */
+.funcionalidade-faixa-texto p {
+  max-width: 540px;
+  margin: 0;
+  font-size: clamp(16px, 1.1vw, 19px);
+  line-height: 1.7;
+}
+
+/* Lista de destaques de cada tela. */
+.funcionalidade-pontos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Pequenas etiquetas informativas. */
+.funcionalidade-pontos li {
+  padding: 9px 13px;
+  background: #ffffff45;
+  border: 1px solid #ffffff75;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Área que posiciona a imagem do aplicativo. */
+.funcionalidade-faixa-imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* Mantém a proporção da imagem da tela. */
+.funcionalidade-faixa-imagem img {
+  display: block;
+  width: 100%;
+  max-width: 410px;
+  max-height: 70svh;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ==========================================
+   DEMAIS FUNCIONALIDADES
+========================================== */
+
+/* Container da apresentação dos recursos. */
+.funcionalidades-recursos {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 100px 6%;
+}
+
+/* Centraliza o título da seção de recursos. */
+.funcionalidades-recursos-cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Título dos demais recursos. */
+.funcionalidades-recursos-cabecalho h2 {
+  max-width: 800px;
+  margin: 0;
+  font-size: clamp(30px, 3.3vw, 46px);
+  line-height: 1.2;
+}
+
+/* Descrição da seção de recursos. */
+.funcionalidades-recursos-cabecalho p {
+  max-width: 700px;
+  margin: 0;
+  color: #707070;
+  line-height: 1.7;
+}
+
+/* Cria uma grade adaptável de cartões. */
+.funcionalidades-grade {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Aparência de cada cartão. */
+.funcionalidade-cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  min-width: 0;
+  padding: 30px;
+
+  background: #fffaf3;
+  border: 1px solid #f0e5d5;
+  border-radius: 16px;
+}
+
+/* Organiza ícone e número do recurso. */
+.funcionalidade-cartao-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Fundo do ícone da funcionalidade. */
+.funcionalidade-cartao-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  background: #ffecd0;
+  border-radius: 14px;
+  font-size: 27px;
+}
+
+/* Numeração dos cartões. */
+.funcionalidade-cartao-numero {
+  color: #c38a45;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Nome da funcionalidade. */
+.funcionalidade-cartao h3 {
+  margin: 0;
+  font-size: 23px;
+  line-height: 1.25;
+}
+
+/* Explicação da funcionalidade. */
+.funcionalidade-cartao p {
+  margin: 0;
+  color: #656565;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* Lista de recursos específicos. */
+.funcionalidade-cartao-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto 0 0;
+  padding: 20px 0 0;
+  list-style: none;
+}
+
+/* Itens da lista com marcador laranja. */
+.funcionalidade-cartao-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #51483b;
+}
+
+/* Desenha o marcador de cada item. */
+.funcionalidade-cartao-lista li::before {
+  content: "✓";
+  color: #df8d11;
+  font-weight: 800;
+}
+
+/* ==========================================
+   ENCERRAMENTO
+========================================== */
+
+/* Mensagem final da página. */
+.funcionalidades-encerramento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 95px 6%;
+  background: #faf8f4;
+  text-align: center;
+}
+
+/* Frase de encerramento. */
+.funcionalidades-encerramento h2 {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(32px, 3.5vw, 48px);
+  line-height: 1.2;
+}
+
+/* Explicação sobre o desenvolvimento. */
+.funcionalidades-encerramento p {
+  max-width: 750px;
+  margin: 0;
+  color: #707070;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* ==========================================
+   RESPONSIVIDADE — TABLETS
+========================================== */
+
+@media (max-width: 900px) {
+
+  /* Empilha texto e imagem das seções amarelas. */
+  .funcionalidade-faixa-conteudo {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+    min-height: auto;
+    padding: 55px 6%;
+  }
+
+  /* Centraliza os textos em telas menores. */
+  .funcionalidade-faixa-texto {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Centraliza as pequenas etiquetas. */
+  .funcionalidade-pontos {
+    justify-content: center;
+  }
+
+  /* Ajusta as imagens do aplicativo. */
+  .funcionalidade-faixa-imagem img {
+    max-width: 340px;
+    max-height: 500px;
+  }
+
+  /* Reduz a grade de cartões para duas colunas. */
+  .funcionalidades-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================
+   RESPONSIVIDADE — CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+
+  /* Reduz o espaço da abertura. */
+  .funcionalidades-abertura {
+    padding: 65px 6%;
+  }
+
+  /* Ajusta o texto inicial. */
+  .funcionalidades-abertura p {
+    font-size: 15px;
+  }
+
+  /* Ajusta os títulos das seções amarelas. */
+  .funcionalidade-faixa-texto h2 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  /* Ajusta os parágrafos. */
+  .funcionalidade-faixa-texto p {
+    font-size: 15px;
+  }
+
+  /* Limita as imagens para os celulares. */
+  .funcionalidade-faixa-imagem img {
+    width: 100%;
+    max-width: 300px;
+    max-height: 450px;
+  }
+
+  /* Exibe um cartão por linha. */
+  .funcionalidades-grade {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  /* Ajusta o espaçamento dos recursos. */
+  .funcionalidades-recursos {
+    padding: 65px 6%;
+  }
+
+  /* Mantém os cartões confortáveis no celular. */
+  .funcionalidade-cartao {
+    padding: 24px;
+  }
+
+  /* Ajusta o encerramento da página. */
+  .funcionalidades-encerramento {
+    padding: 70px 6%;
+  }
+}

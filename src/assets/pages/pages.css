@@ -1,0 +1,834 @@
+
+/* ==========================================
+   GERENCIACÃO — ESTILOS DAS PÁGINAS
+========================================== */
+
+/* Cores compartilhadas pelas três páginas. */
+:root {
+  --cor-laranja: #e9951c;
+  --cor-texto: #191919;
+  --cor-descricao: #777777;
+  --cor-fundo-suave: #faf9f7;
+  --cor-borda: #e5e1dc;
+}
+
+/* Pequeno título laranja usado acima dos títulos. */
+.pagina-etiqueta {
+  color: var(--cor-laranja);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   PÁGINA CONTATO
+========================================== */
+
+/* Divide a página em duas colunas. */
+.contato-pagina {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  min-height: 620px;
+  padding: 70px 7%;
+}
+
+/* Organiza as informações da coluna esquerda. */
+.contato-informacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Título principal do contato. */
+.contato-informacoes h1 {
+  margin: 0;
+  color: var(--cor-texto);
+  font-size: clamp(32px, 3.3vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+/* Destaca o nome do projeto em laranja. */
+.contato-informacoes h1 span {
+  color: var(--cor-laranja);
+}
+
+/* Texto explicativo. */
+.contato-informacoes > p {
+  margin: 0;
+  max-width: 450px;
+  color: var(--cor-descricao);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Organiza o ícone e o endereço de e-mail. */
+.contato-meio {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Fundo bege do ícone de contato. */
+.contato-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fff3df;
+  color: var(--cor-laranja);
+  font-size: 23px;
+}
+
+/* Organiza o nome e o endereço de e-mail. */
+.contato-meio > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Estilo do link de e-mail. */
+.contato-meio a {
+  color: #555555;
+  font-size: 14px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+/* Destaca o link quando o mouse passa por cima. */
+.contato-meio a:hover {
+  color: var(--cor-laranja);
+}
+
+/* Caixa cinza-clara do formulário. */
+.contato-formulario-container {
+  background: #f4f4f4;
+  border-radius: 15px;
+  padding: 35px;
+}
+
+/* Título do formulário. */
+.contato-formulario-container h2 {
+  margin: 0 0 25px;
+  color: var(--cor-texto);
+  font-size: 20px;
+}
+
+/* Organiza os campos um abaixo do outro. */
+.contato-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Agrupa cada label e seu campo. */
+.formulario-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Estilo do nome dos campos. */
+.formulario-campo label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #343434;
+}
+
+/* Aparência dos campos de texto. */
+.formulario-campo input,
+.formulario-campo textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 7px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--cor-texto);
+}
+
+/* Permite aumentar a mensagem apenas verticalmente. */
+.formulario-campo textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* Destaca o campo selecionado. */
+.formulario-campo input:focus,
+.formulario-campo textarea:focus {
+  outline: 2px solid var(--cor-laranja);
+  outline-offset: 1px;
+}
+
+/* Botão laranja de envio. */
+.contato-enviar {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #f2a11b;
+  color: #191919;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Altera a cor quando o mouse passa no botão. */
+.contato-enviar:hover {
+  background: #e9951c;
+}
+
+/* ==========================================
+   PÁGINA EQUIPE
+========================================== */
+
+/* Centraliza o conteúdo da página. */
+.equipe-pagina {
+  padding: 65px 7% 100px;
+  min-height: 650px;
+}
+
+/* Organiza título e descrição da equipe. */
+.equipe-cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Título principal da equipe. */
+.equipe-cabecalho h1 {
+  margin: 0;
+  max-width: 850px;
+  color: var(--cor-texto);
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+/* Destaque laranja do projeto. */
+.equipe-cabecalho h1 span {
+  color: var(--cor-laranja);
+}
+
+/* Descrição da equipe. */
+.equipe-cabecalho p {
+  max-width: 700px;
+  margin: 0;
+  color: var(--cor-descricao);
+  line-height: 1.7;
+}
+
+/* Distribui os cartões em linhas centralizadas. */
+.equipe-grade {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Define a aparência de cada integrante. */
+.equipe-cartao {
+  width: 172px;
+  flex: 0 1 172px;
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efeito discreto ao passar o mouse. */
+.equipe-cartao:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px #00000012;
+}
+
+/* Espaço reservado para a fotografia. */
+.equipe-foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #f4e9dc;
+}
+
+/* Imagem do integrante, quando informada. */
+.equipe-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Iniciais utilizadas antes de colocar a foto. */
+.equipe-foto span {
+  color: #b8783b;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+/* Área inferior com nome e função. */
+.equipe-dados {
+  padding: 12px 8px;
+  text-align: center;
+}
+
+/* Nome do integrante. */
+.equipe-dados h2 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  color: var(--cor-texto);
+}
+
+/* Função do integrante. */
+.equipe-dados p {
+  margin: 0;
+  color: var(--cor-descricao);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* ==========================================
+   PÁGINA SOBRE
+========================================== */
+
+/* Agrupa todas as seções da página. */
+.sobre-pagina {
+  width: 100%;
+}
+
+/* Primeira seção explicando o aplicativo. */
+.sobre-abertura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 320px;
+  padding: 65px 7%;
+  text-align: center;
+}
+
+/* Título inicial da página Sobre. */
+.sobre-abertura h1 {
+  margin: 0;
+  font-size: clamp(32px, 3.5vw, 48px);
+  color: var(--cor-texto);
+  letter-spacing: -1px;
+}
+
+/* Destaque dos títulos da página Sobre. */
+.sobre-pagina h1 span,
+.sobre-pagina h2 span {
+  color: var(--cor-laranja);
+}
+
+/* Descrição inicial do aplicativo. */
+.sobre-abertura p {
+  max-width: 800px;
+  margin: 0;
+  color: var(--cor-descricao);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Seções com texto e imagem lado a lado. */
+.sobre-secao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+  min-height: 510px;
+  padding: 70px 7%;
+}
+
+/* Fundo suave para diferenciar a seção da Helena. */
+.sobre-helena {
+  background: #fffaf3;
+}
+
+/* Mantém a seção do desafio com fundo branco. */
+.sobre-desafio {
+  background: #ffffff;
+}
+
+/* Organiza o conteúdo textual das seções. */
+.sobre-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Títulos das seções. */
+.sobre-conteudo h2,
+.sobre-solucao h2,
+.sobre-proposito h2 {
+  margin: 0;
+  color: var(--cor-texto);
+  font-size: clamp(29px, 3vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+/* Parágrafos das seções. */
+.sobre-conteudo p,
+.sobre-solucao p,
+.sobre-proposito p {
+  margin: 0;
+  color: var(--cor-descricao);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Identificação da persona. */
+.sobre-conteudo small {
+  color: #9e8a77;
+  font-size: 12px;
+}
+
+/* Container das imagens. */
+.sobre-imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Espaço provisório das imagens do Figma. */
+.sobre-imagem-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  min-height: 310px;
+  border-radius: 16px;
+  background: #f3e8d9;
+}
+
+/* Símbolo ilustrativo provisório. */
+.sobre-imagem-placeholder span {
+  font-size: 65px;
+}
+
+/* Texto do espaço provisório. */
+.sobre-imagem-placeholder p {
+  margin: 0;
+  color: #9e7650;
+  font-size: 14px;
+}
+
+/* Seção centralizada da solução. */
+.sobre-solucao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-height: 470px;
+  padding: 75px 7%;
+  background: #fffaf3;
+  text-align: center;
+}
+
+/* Limita a largura da descrição. */
+.sobre-solucao > p {
+  max-width: 790px;
+}
+
+/* Organiza os recursos horizontalmente. */
+.sobre-recursos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 850px;
+  margin-top: 20px;
+}
+
+/* Aparência de cada recurso do aplicativo. */
+.sobre-recurso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 115px;
+  padding: 18px;
+  border: 1px solid #f0e2cd;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+/* Ícone ilustrativo do recurso. */
+.sobre-recurso span {
+  font-size: 28px;
+}
+
+/* Nome do recurso. */
+.sobre-recurso strong {
+  color: #674b31;
+  font-size: 14px;
+}
+
+/* Última seção com o propósito do projeto. */
+.sobre-proposito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  min-height: 390px;
+  padding: 75px 7%;
+  text-align: center;
+}
+
+/* Define o limite de largura do título. */
+.sobre-proposito h2 {
+  max-width: 850px;
+}
+
+/* Define o limite de largura da descrição. */
+.sobre-proposito p {
+  max-width: 740px;
+}
+
+/* Botão que direciona às funcionalidades. */
+.sobre-botao {
+  padding: 15px 28px;
+  border: none;
+  border-radius: 12px;
+  background: #191919;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Efeito do botão. */
+.sobre-botao:hover {
+  background: var(--cor-laranja);
+}
+
+/* Rodapé da página Sobre. */
+.sobre-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 24px 7%;
+  background: #f6f4f1;
+}
+
+/* Tipografia do rodapé. */
+.sobre-rodape p {
+  margin: 0;
+  color: #8a7563;
+  font-size: 13px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+/* Adapta os layouts em telas menores. */
+@media (max-width: 850px) {
+
+  /* Transforma o Contato em uma coluna. */
+  .contato-pagina {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 55px 6%;
+  }
+
+  /* Transforma as seções Sobre em uma coluna. */
+  .sobre-secao {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 60px 6%;
+  }
+
+  /* Coloca o texto antes da imagem do desafio. */
+  .sobre-desafio .sobre-conteudo {
+    order: -1;
+  }
+
+  /* Ajusta a grade dos recursos. */
+  .sobre-recursos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reduz o espaçamento da página Equipe. */
+  .equipe-pagina {
+    padding: 55px 6%;
+  }
+}
+
+/* Ajustes adicionais para celulares pequenos. */
+@media (max-width: 480px) {
+
+  /* Reduz o espaço interno do formulário. */
+  .contato-formulario-container {
+    padding: 22px;
+  }
+
+  /* Ajusta a largura dos cartões da equipe. */
+  .equipe-cartao {
+    width: 145px;
+    flex-basis: 145px;
+  }
+
+  /* Reduz o espaçamento entre os integrantes. */
+  .equipe-grade {
+    gap: 12px;
+  }
+
+  /* Ajusta os espaçamentos da abertura Sobre. */
+  .sobre-abertura {
+    padding: 55px 6%;
+  }
+
+  /* Empilha os itens do rodapé. */
+  .sobre-rodape {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* ==========================================
+   FOTOGRAFIAS DA PÁGINA SOBRE
+========================================== */
+
+/* Define o tamanho e a aparência das imagens da Helena. */
+.sobre-fotografia {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 4 / 3;
+
+  /* Evita que a fotografia fique deformada. */
+  object-fit: cover;
+  object-position: center;
+
+  /* Arredonda os cantos da imagem. */
+  border-radius: 16px;
+  display: block;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE — TABLETS E CELULARES
+========================================== */
+
+/* Ajustes para telas com até 900 pixels. */
+@media (max-width: 900px) {
+
+  /* CONTATO: coloca texto e formulário um abaixo do outro. */
+  .contato-pagina {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    min-height: auto;
+    padding: 45px 6%;
+  }
+
+  /* Faz o formulário ocupar toda a largura disponível. */
+  .contato-formulario-container {
+    width: 100%;
+    padding: 28px;
+  }
+
+  /* SOBRE: transforma as seções em uma única coluna. */
+  .sobre-secao {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    min-height: auto;
+    padding: 55px 6%;
+  }
+
+  /* Ajusta o espaço da primeira seção Sobre. */
+  .sobre-abertura {
+    min-height: auto;
+    padding: 55px 6%;
+  }
+
+  /* Evita imagens maiores que o espaço disponível. */
+  .sobre-fotografia {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  /* Mantém o texto do desafio antes da imagem. */
+  .sobre-desafio .sobre-conteudo {
+    order: 0;
+  }
+
+  /* Posiciona a imagem do desafio depois do texto. */
+  .sobre-desafio .sobre-imagem {
+    order: 1;
+  }
+
+  /* Reduz os espaços das seções finais. */
+  .sobre-solucao,
+  .sobre-proposito {
+    min-height: auto;
+    padding: 60px 6%;
+  }
+
+  /* Distribui as funcionalidades em duas colunas. */
+  .sobre-recursos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* EQUIPE: organiza os integrantes em duas colunas. */
+  .equipe-grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 480px;
+    gap: 16px;
+  }
+
+  /* Faz cada card acompanhar a largura da coluna. */
+  .equipe-cartao {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* ==========================================
+   AJUSTES EXCLUSIVOS PARA CELULARES
+========================================== */
+
+@media (max-width: 480px) {
+
+  /* Aumenta a legibilidade do título da página Sobre. */
+  .sobre-abertura h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  /* Padroniza os títulos das seções. */
+  .sobre-conteudo h2,
+  .sobre-solucao h2,
+  .sobre-proposito h2 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Mantém os textos confortáveis para leitura. */
+  .sobre-abertura p,
+  .sobre-conteudo p,
+  .sobre-solucao p,
+  .sobre-proposito p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  /* Ajusta a distância entre os elementos da Helena. */
+  .sobre-conteudo {
+    gap: 16px;
+  }
+
+  /* Faz as imagens ocuparem a largura da coluna. */
+  .sobre-imagem {
+    width: 100%;
+  }
+
+  /* Mantém as imagens proporcionais e arredondadas. */
+  .sobre-fotografia {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+
+  /* Reduz a altura das seções. */
+  .sobre-secao {
+    padding: 44px 6%;
+  }
+
+  /* Ajusta o espaçamento dos recursos. */
+  .sobre-recursos {
+    gap: 12px;
+  }
+
+  /* Garante que o botão seja fácil de tocar. */
+  .sobre-botao {
+    min-height: 48px;
+    max-width: 100%;
+  }
+
+  /* CONTATO: ajusta o título para telas pequenas. */
+  .contato-informacoes h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  /* Deixa o formulário compacto sem apertar os campos. */
+  .contato-formulario-container {
+    padding: 22px 18px;
+  }
+
+  /* Evita zoom automático no iPhone ao focar no campo. */
+  .formulario-campo input,
+  .formulario-campo textarea {
+    font-size: 16px;
+  }
+
+  /* Aumenta a área de toque do botão de envio. */
+  .contato-enviar {
+    min-height: 48px;
+  }
+
+  /* EQUIPE: ajusta os cartões para o celular. */
+  .equipe-pagina {
+    padding: 45px 6%;
+  }
+
+  /* Reduz o espaçamento entre os integrantes. */
+  .equipe-grade {
+    gap: 12px;
+  }
+
+  /* Mantém os cards preenchendo suas colunas. */
+  .equipe-cartao {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  /* Mantém o enquadramento das fotografias. */
+  .equipe-foto {
+    aspect-ratio: 4 / 5;
+  }
+
+  /* Evita que nomes compridos ultrapassem os cartões. */
+  .equipe-dados h2 {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  /* Ajusta a descrição da função do integrante. */
+  .equipe-dados p {
+    font-size: 11px;
+  }
+
+  /* Empilha as informações do rodapé. */
+  .sobre-rodape {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px 6%;
+  }
+}
