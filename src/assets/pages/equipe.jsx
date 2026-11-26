@@ -11,41 +11,49 @@ import "./pages.css";
 const integrantes = [
   {
     nome: "Lucas Torino",
+    linkedin: "https://www.linkedin.com/in/lucas-torino-91844843a/",
     funcao: "P.O. / Dados",
-    foto: "/images/lucastorino.jpg",
+    foto: "/images/Torino.png",
   },
   {
     nome: "Giovanna Fernandes",
+    linkedin: "https://www.linkedin.com/in/giovanna-fernandes-san/",
     funcao: "Scrum Master / Marketing",
     foto: "/images/giovanna.jpg",
   },
   {
     nome: "Nikolas De Paula",
+    linkedin: "https://www.linkedin.com/in/nikolaspsousa/",
     funcao: "Documentação / Finanças",
     foto: "/images/nikolas.png",
   },
   {
     nome: "Emilly Keury",
+    linkedin: "https://www.linkedin.com/in/emilly-coelho-458857390/",
     funcao: "Desenvolvimento / IA",
     foto: "/images/emilly.png",
   },
   {
     nome: "Gustavo Felipe",
+    linkedin: "https://www.linkedin.com/in/gustavo-felipe10/",
     funcao: "Desenvolvimento / Vendas",
-    foto: "/images/gustavo.jpg",
+    foto: "/images/gusta.png",
   },
   {
     nome: "Max Arthur",
+    linkedin: "https://www.linkedin.com/in/maxarthur/",
     funcao: "Desenvolvimento / Marketing",
     foto: "/images/max.jpeg",
   },
   {
     nome: "Pedro Henrique",
+    linkedin: "https://www.linkedin.com/in/p3dru/",
     funcao: "Desenvolvimento / IA",
     foto: "/images/pedro.jpg",
   },
   {
     nome: "Thales Alexandre",
+    linkedin: "https://www.linkedin.com/in/thalesascarvalho/",
     funcao: "Desenvolvimento / Marketing",
     foto: "/images/thales.jpg",
   },
@@ -63,7 +71,13 @@ function CartaoIntegrante({ pessoa }) {
     .join("");
 
   return (
-    <article className="equipe-cartao">
+    <a
+      className="equipe-cartao"
+      href={pessoa.linkedin}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`LinkedIn de ${pessoa.nome} (abre em nova aba)`}
+    >
 
       {/* Fotografia ou iniciais do integrante. */}
       <div className="equipe-foto">
@@ -78,8 +92,9 @@ function CartaoIntegrante({ pessoa }) {
       <div className="equipe-dados">
         <h2>{pessoa.nome}</h2>
         <p>{pessoa.funcao}</p>
+        <span className="equipe-linkedin">Ver LinkedIn</span>
       </div>
-    </article>
+    </a>
   );
 }
 

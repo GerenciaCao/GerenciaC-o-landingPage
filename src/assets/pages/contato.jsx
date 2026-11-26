@@ -48,7 +48,7 @@ function Contato() {
         <h1>
           Vamos conversar sobre o
           <br />
-          <span>GerenciaCÃO?</span>
+          <span>GerenciaCão?</span>
         </h1>
 
         <p>

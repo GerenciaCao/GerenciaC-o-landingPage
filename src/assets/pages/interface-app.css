@@ -1,0 +1,186 @@
+/* As medidas internas acompanham a largura de 392 dp do aparelho de referência. */
+.gc-demo__screen { --papel:#fffcf7; --texto:#392a21; --cafe:#783e19; --linha:#eaded1; --ouro:#ffb21c; --topo:#ffae49; background:var(--topo); color:var(--texto); font-family:Roboto,"Segoe UI",Arial,sans-serif; }
+.gc-demo__screen[data-cor="azul"] { --topo:#8ac8fc; }
+.gc-demo__screen[data-cor="creme"] { --topo:var(--papel); }
+.gc-demo .gc-demo__statusbar { zoom:var(--escala-app); flex-basis:24px; padding:1px 25px 1px 34px; align-items:center; background:var(--topo); font-size:13px; }
+.gc-demo .gc-android__cabecalho { zoom:var(--escala-app); flex-basis:84px; padding:18px 22px; gap:12px; background:var(--topo); }
+.gc-demo .gc-android__avatar { width:48px; height:48px; }
+.gc-demo .gc-android__saudacao strong { font-size:21px; }
+.gc-demo .gc-android__saudacao small { font-size:11px; }
+.gc-demo .gc-android__menu-botao { width:48px; height:48px; }
+.gc-demo__rolagem { background:var(--papel); scrollbar-width:none; }
+.gc-demo__rolagem[hidden] { display:none; }
+.gc-demo--iniciada .gc-demo__rolagem { border-radius:calc(28px * var(--escala-app)) calc(28px * var(--escala-app)) 0 0; }
+.gc-demo .gc-demo__nav-app { zoom:var(--escala-app); flex-basis:70px; padding:6px; gap:1px; background:white; }
+.gc-demo .gc-demo__nav-app button { border-radius:17px; gap:4px; font-size:12px; color:#786a61; }
+.gc-demo .gc-demo__nav-app button.ativo { background:#493020; color:white; }
+.gc-demo .gc-demo__nav-app button img { width:23px; height:23px; filter:brightness(0) saturate(100%) opacity(.56); }
+.gc-demo .gc-demo__nav-app button.ativo img { filter:brightness(0) invert(1); }
+.gc-demo .gc-demo__nav-app button small { font-size:11px; }
+.gc-demo .gc-demo__barra-gesto { zoom:var(--escala-app); flex-basis:26px; background:var(--papel); }
+.gc-demo--iniciada .gc-demo__barra-gesto { background:white; }
+.gc-demo .gc-demo__barra-gesto::after { width:106px; bottom:10px; }
+.app-pagina,.app-acesso,.app-painel { font:16px/1.38 Roboto,"Segoe UI",Arial,sans-serif; color:var(--texto); text-align:left; }
+.app-pagina,.app-acesso { zoom:var(--escala-app); padding:22px 22px 30px; }
+.app-pagina :is(h2,h3,h4,p),.app-acesso :is(h2,p),.app-painel :is(h3,h4,p) { margin:0; }
+.app-pagina h2,.app-acesso h2 { font-size:28px; line-height:1.18; font-weight:700; }
+.app-pagina h3,.app-painel h3 { font-size:19px; line-height:1.28; margin:20px 0 10px; }
+.app-pagina p,.app-painel p { font-size:14px; line-height:1.5; margin:12px 0; }
+.app-pagina small,.app-painel small { font-size:12px; line-height:1.4; }
+.app-pagina button,.app-acesso button,.app-painel button { border:0; background:none; color:var(--cafe); font-size:14px; line-height:1.3; font-family:inherit; font-weight:600; cursor:pointer; padding:7px 4px; }
+.app-titulo,.app-linha,.app-item,.app-busca,.app-especies,.app-abas,.app-controles-mes,.app-subtotais,.app-dupla,.app-mes { display:flex; align-items:center; gap:10px; }
+.app-titulo { margin:0 0 24px; min-height:48px; }
+.app-titulo h2,.app-linha h3 { flex:1; margin:0; }
+.app-titulo .app-pilula,.app-pagina .app-primario,.app-painel .app-primario { background:var(--ouro); border-radius:99px; color:#402917; padding:12px 18px; font-size:14px; }
+.app-titulo .app-pilula { min-height:48px; white-space:nowrap; }
+.app-titulo .app-voltar { width:34px; min-height:36px; font-size:30px; line-height:1; }
+.app-linha { justify-content:space-between; margin:20px 0 14px; }
+.app-linha>button,.app-controles-mes>button { font-size:12px; }
+.app-cartao,.app-produto,.app-calendario { border:1px solid var(--linha); border-radius:19px; background:white; }
+.app-pagina .app-cartao,.app-pagina .app-produto { border:1px solid var(--linha); background:white; padding:16px; margin:10px 0; color:var(--texto); }
+.app-cartao>.app-linha:first-child,.app-cartao>h3:first-child { margin-top:0; }
+.app-cartao .app-linha { margin-bottom:10px; }
+.app-pagina .app-primario,.app-painel .app-primario,.app-pagina .app-secundario,.app-painel .app-secundario { display:block; width:100%; margin:14px 0; }
+.app-pagina .app-secundario,.app-painel .app-secundario { background:#ffefc7; border-radius:13px; padding:13px; }
+.app-pagina .app-busca { background:#fff; border:1px solid var(--linha); border-radius:21px; padding:4px 4px 4px 14px; min-height:55px; margin-bottom:18px; }
+.app-busca>img { width:20px; height:20px; }
+.app-busca input { flex:1; min-width:0; border:0; background:transparent; padding:8px; font:inherit; font-size:14px; }
+.app-busca .app-filtro { width:38px; height:38px; border-radius:50%; background:var(--cafe); color:white; }
+.app-chips { display:flex; align-items:center; flex-wrap:wrap; gap:7px; }
+.app-chips button,.app-chip { font-size:12px; border-radius:99px; background:#fff; color:#725748; padding:8px 15px; }
+.app-chips button[aria-pressed="true"] { background:#ffefc9; color:#623519; }
+.app-chips img { width:24px; height:24px; border-radius:50%; object-fit:cover; vertical-align:middle; margin-right:5px; }
+.app-especies { justify-content:space-between; margin-bottom:18px; }
+.app-especies .app-chips { flex-wrap:nowrap; }
+.app-especies .app-chips button { display:flex; align-items:center; padding:4px 12px; min-height:32px; background:#ffefc5; }
+.app-especies .app-chips button[aria-pressed="true"] { background:var(--ouro); }
+.app-arquivo { max-width:76px; font-size:11px; }
+.app-arquivo b { display:block; font-size:23px; }
+.app-item { width:100%; text-align:left; }
+.app-item>span:not(.app-situacao,.app-inicial,.app-entrada,.app-saida) { flex:1; min-width:0; }
+.app-item strong,.app-produto strong { display:block; font-size:16px; }
+.app-item small,.app-produto small,.app-faixa small { display:block; margin-top:6px; color:#766b62; font-weight:400; }
+.app-avatar,.app-inicial { width:56px; height:56px; flex-shrink:0; object-fit:cover; border-radius:50%; background:#ffefc5; }
+.app-inicial { display:grid; place-items:center; font-weight:700; color:var(--cafe); font-size:24px; }
+.app-pagina .app-animal { min-height:100px; box-shadow:0 2px 2px #43281816; }
+.app-situacao { display:inline-block; align-self:flex-start; font-size:11px; color:#553815; background:#b7eb90; border-radius:99px; padding:5px 8px; white-space:nowrap; }
+.app-situacao[data-situacao="Visita marcada"] { background:#ffda83; }
+.app-situacao[data-situacao="Adotado"] { background:#ffc8c6; }
+.app-animal .app-situacao { margin-top:8px; }
+.app-foto-ficha,.app-capa { width:100%; border-radius:18px; object-fit:cover; }
+.app-foto-ficha { aspect-ratio:4/3; background:#9adbf6; display:grid; place-items:center; overflow:hidden; }
+.app-foto-ficha img { width:100%; height:100%; object-fit:contain; }
+.app-historico { padding:18px; border-radius:16px; background:#b7e7fc; }
+.app-dados,.app-ocupacao dl { margin:0; }
+.app-dados div,.app-ocupacao dl div { display:flex; justify-content:space-between; gap:10px; padding:9px 0; font-size:14px; }
+.app-dados div+div { border-top:1px solid var(--linha); }
+.app-dados dd,.app-ocupacao dd { margin:0; text-align:right; font-weight:600; }
+.app-abas { margin:10px 0 16px; }
+.app-abas button { flex:1; padding:12px 0; border-bottom:3px solid #eee4da; color:var(--texto); font-weight:400; }
+.app-abas button[aria-pressed="true"] { border-color:#ff9828; font-weight:700; }
+.app-banner-img,.app-servico { display:block; width:100%; }
+.app-pagina .app-banner-img,.app-pagina .app-servico { padding:0; }
+.app-banner-img img,.app-servico img { display:block; width:100%; object-fit:cover; border-radius:17px; }
+.app-servico { margin:14px 0; }
+.app-carrossel { touch-action:pan-y; }
+.app-banner-img img,.app-banner-home { height:128px; }
+.app-carrossel .app-banner-img { width:91%; margin:auto; }
+.app-pontos { display:flex; justify-content:center; gap:5px; }
+.app-pontos button { width:23px; height:26px; padding:0; background:transparent; position:relative; }
+.app-pontos button::after { content:""; display:block; margin:auto; width:6px; height:6px; border-radius:50%; background:#d6cbc2; }
+.app-pontos button[aria-pressed="true"]::after { background:#493020; width:9px; height:9px; }
+.app-banner-home { border-radius:18px; background:#ffb344; display:flex; gap:6px; align-items:center; padding:12px 14px; overflow:hidden; }
+.app-banner-home strong { display:block; font-size:21px; line-height:1.15; }
+.app-banner-home img { width:38%; height:120%; object-fit:contain; }
+.app-banner-home button { border-radius:30px; padding:7px 12px; background:white; margin-top:8px; }
+.app-atalhos,.app-semana { display:flex; gap:8px; overflow-x:auto; padding-bottom:5px; }
+.app-atalhos button { flex:0 0 46%; min-height:48px; display:flex; gap:7px; align-items:center; justify-content:center; background:#fff; border:1px solid var(--linha); border-radius:14px; font-size:14px; }
+.app-atalhos img { width:25px; height:25px; object-fit:contain; }
+.app-semana button { flex:1; padding:8px 0; border-radius:22px; background:white; border:1px solid var(--linha); }
+.app-semana button[aria-pressed="true"] { background:#ffb63a; }
+.app-semana b,.app-semana small { display:block; }
+.app-ocupacao { display:flex; gap:16px; align-items:center; }
+.app-ocupacao dl { flex:1; }
+.app-anel { flex:0 0 91px; height:91px; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:radial-gradient(closest-side, white 78%, transparent 80%),conic-gradient(#ffb21c var(--ocupado),#f2e9de 0); }
+.app-anel b { font-size:22px; }
+.app-vitrine,.app-dupla { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.app-pagina .app-produto { width:100%; text-align:left; overflow:hidden; margin:0; padding:9px; }
+.app-lista .app-produto { margin:5px 0; }
+.app-produto-imagem { height:140px; display:grid; place-items:center; border-bottom:1px solid var(--linha); }
+.app-produto-imagem img,.app-oferta-foto { width:100%; height:100%; object-fit:contain; }
+.app-produto-imagem img.app-produto-icone { width:40px; height:40px; opacity:.55; }
+.app-produto strong { margin-top:8px; font-size:14px; }
+.app-produto b { display:block; padding:6px 0; color:var(--cafe); }
+.app-oferta-foto { height:175px; display:block; margin-bottom:12px; }
+.app-periodo { position:relative; display:inline-block; color:var(--cafe); font-size:15px; font-weight:600; margin:4px 0 18px; text-transform:capitalize; }
+.app-periodo input { position:absolute; inset:0; width:100%; opacity:0; cursor:pointer; }
+.app-periodo input::-webkit-calendar-picker-indicator { position:absolute; inset:0; width:100%; height:100%; cursor:pointer; }
+.app-pagina .app-saldo { padding:24px 16px 17px; }
+.app-saldo>strong { display:block; font-size:32px; line-height:1.3; }
+.app-saldo small { color:#82756a; }
+.app-saldo .app-linha { margin:0 0 8px; }
+.app-subtotais { border-top:1px solid var(--linha); margin-top:18px; padding-top:15px; }
+.app-subtotais>div { flex:1; }
+.app-subtotais b { display:block; margin-top:4px; font-size:17px; }
+.app-pagina .positivo { color:#287751; }.app-pagina .negativo { color:#ad4a24; }
+.app-controles-mes,.app-mes { justify-content:space-between; }
+.app-controles-mes { margin:0 0 34px; }
+.app-mov .app-entrada,.app-mov .app-saida { width:39px; height:39px; display:grid; place-items:center; border-radius:13px; background:#e5f4e6; color:#267751; font-size:20px; }
+.app-mov .app-saida { background:#fce9dd; color:#aa5126; }
+.app-mov b { font-size:13px; }
+.app-mes strong { order:-1; flex:1; text-transform:capitalize; font-size:16px; }
+.app-mes button { width:44px; font-size:22px; }
+.app-calendario { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:0; padding:10px 6px; text-align:center; }
+.app-calendario strong { padding:5px 0; font-size:13px; }
+.app-calendario button { width:34px; height:34px; margin:7px auto; font-size:15px; font-weight:400; border-radius:50%; color:var(--texto); }
+.app-calendario button[data-marcado="true"] { background:#ffc5c5; }
+.app-calendario button[aria-pressed="true"] { background:#ffae49; font-weight:700; }
+.app-legenda { display:flex; gap:13px; margin:16px 0 32px; font-size:14px; }
+.app-legenda span::before { content:""; display:inline-block; width:14px; height:14px; margin-right:5px; border-radius:50%; background:#f2c94c; vertical-align:-2px; }
+.app-legenda span:nth-child(2)::before { background:#a6cf72; }.app-legenda span:nth-child(3)::before { background:#80cdf8; }
+.app-overlay { position:absolute; inset:0; z-index:10; background:#22150d66; display:flex; align-items:center; justify-content:center; padding:14px; }
+.app-painel { zoom:var(--escala-app); padding:20px; width:100%; max-height:96%; overflow:auto; background:var(--papel); border-radius:20px; box-shadow:0 10px 30px #27160844; }
+.app-painel .app-linha { margin:0 0 12px; }.app-painel .app-linha button { font-size:23px; width:36px; }
+.app-campo { display:flex; flex-direction:column; gap:5px; margin:12px 0; font-size:14px; }
+.app-campo select,.app-campo input,.app-acesso input { width:100%; min-width:0; padding:12px; border:1px solid var(--linha); background:white; border-radius:12px; font:inherit; color:var(--texto); }
+.app-faixa { padding:10px 0; border-top:1px solid var(--linha); }
+.app-acesso { text-align:center; padding:22px 24px 30px; color:var(--cafe); }
+.app-acesso .app-marca { display:block; width:187px; height:164px; object-fit:contain; margin:0 auto 13px; }
+.app-acesso h2 { font-size:26px; }
+.app-acesso p { font-size:14px; color:#86766b; margin:8px 0 0; }
+.app-acesso form { margin:36px 0 21px; text-align:left; }
+.app-acesso form label { display:block; font-weight:600; font-size:15px; margin:0 0 16px; }
+.app-acesso input { display:block; height:57px; margin-top:7px; font-size:14px; font-weight:400; }
+.app-senha { display:block; position:relative; }.app-senha input { padding-right:72px; }
+.app-senha button { position:absolute; right:7px; top:7px; height:42px; font-size:12px; }
+.app-acesso .app-esqueceu { display:block; width:100%; text-align:right; font-size:13px; margin:-7px 0 20px; }
+.app-acesso .app-demobtn,.app-acesso .app-entrar { display:block; width:100%; border-radius:15px; min-height:54px; font-size:17px; background:#432818; color:white; margin:0 0 12px; font-weight:700; }
+.app-acesso .app-entrar { background:#ffb21c; color:#653a13; }
+.app-acesso p button { font-size:13px; }
+.app-ou { display:flex; align-items:center; gap:10px; color:#88786b; font-size:13px; margin:30px 0 17px; }
+.app-ou::before,.app-ou::after { content:""; flex:1; border-top:1px solid var(--linha); }
+.app-social { display:flex; justify-content:center; gap:18px; }
+.app-social button { width:45px; height:45px; border-radius:50%; background:white; border:1px solid var(--linha); color:#2976ba; font-size:20px; }
+.gc-demo__rolagem .gc-demo__pagina { color:var(--texto); }
+@media(prefers-reduced-motion:reduce) { .gc-demo__aparelho,.gc-demo--iniciada .gc-demo__aparelho,.gc-demo__explicacao { animation:none; } }
+
+.app-banner-home { width:91%; margin:auto; background:#ffae43; color:#175a91; }
+.app-banner-home button { background:#175a91; color:white; }
+.app-pontos { position:relative; align-items:center; }
+.app-pontos button.app-pausa { position:absolute; right:0; width:34px; }
+.app-pontos button.app-pausa::after { display:none; }
+.app-identidade { display:flex; gap:16px; align-items:center; }
+.app-identidade>img { width:86px; height:86px; border-radius:50%; object-fit:cover; }
+.app-identidade h3,.app-identidade p { margin:0 0 4px; }
+.app-identidade button { padding:6px 12px; border:1px solid var(--linha); border-radius:12px; }
+.app-atalhos-perfil button { padding:13px; text-align:left; border-radius:15px; background:#fff0c9; }
+.app-atalhos-perfil button:nth-child(2) { background:#e4f3df; }
+.app-atalhos-perfil small,.app-grupo small { display:block; margin-top:4px; font-weight:400; }
+.app-grupo h3 { margin:22px 0 8px; font-size:12px; color:var(--cafe); }.app-grupo .app-cartao { padding:0 14px; }
+.app-grupo button { width:100%; display:flex; align-items:center; justify-content:space-between; text-align:left; padding:13px 0; }.app-grupo button+button { border-top:1px solid var(--linha); }
+.app-postagem { aspect-ratio:1; position:relative; background:#fff0c9; border-top:5px solid #ffb21c; text-align:center; color:#38291f; }
+.app-postagem img,.app-postagem strong,.app-postagem p,.app-postagem small { position:absolute; left:7.5%; width:85%; margin:0; }
+.app-postagem img { top:6%; height:22%; object-fit:contain; filter:brightness(0) saturate(100%) invert(72%) sepia(91%) saturate(659%) hue-rotate(342deg); }
+.app-postagem strong { top:31%; font-size:21px; max-height:20%; overflow:hidden; }
+.app-postagem p { top:51%; font-size:12px; line-height:1.24; max-height:32%; overflow:hidden; white-space:pre-line; }
+.app-postagem small { top:87%; }.app-campo textarea { border:1px solid var(--linha); border-radius:12px; padding:10px; font:inherit; resize:vertical; }

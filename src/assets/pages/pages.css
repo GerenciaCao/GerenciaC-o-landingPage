@@ -832,3 +832,17 @@
     padding: 22px 6%;
   }
 }
+
+/* Mantém os integrantes em dois cartões compactos por linha no celular. */
+@media (max-width: 480px) {
+  .equipe-grade {
+    max-width: 310px;
+    margin-inline: auto;
+    gap: 12px;
+  }
+}
+/* O cartão inteiro abre o perfil profissional do integrante. */
+a.equipe-cartao { display:block; color:inherit; text-decoration:none; cursor:pointer; }
+a.equipe-cartao:focus-visible { outline:3px solid #895014; outline-offset:4px; }
+.equipe-linkedin { display:inline-block; margin-top:10px; font-size:13px; font-weight:600; color:#895014; }
+a.equipe-cartao:hover .equipe-linkedin { text-decoration:underline; }

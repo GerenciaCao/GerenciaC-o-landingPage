@@ -1,0 +1,125 @@
+/* Ajustes de leitura e toque para visitantes em celulares. */
+.cabecalho .botao-logo img {
+  width: clamp(165px, 12vw, 220px);
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .cabecalho {
+    height: auto;
+    min-height: 100px;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 5% 12px;
+  }
+
+  .cabecalho .botao-logo img {
+    width: 165px;
+  }
+
+  .cabecalho .menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+  }
+
+  .cabecalho .menu button {
+    min-height: 44px;
+    padding: 10px 9px;
+    font-size: 14px;
+    white-space: nowrap;
+    border-radius: 8px;
+  }
+
+  .cabecalho .menu button.ativo {
+    color: #895014;
+    background: #fff3df;
+  }
+}
+
+@media (max-width: 600px) {
+  .inicio {
+    padding-top: 32px;
+    gap: 28px;
+  }
+
+  .inicio-texto {
+    gap: 24px;
+  }
+
+  .botao-teste,
+  .sobre-botao,
+  .contato-enviar {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  .funcionalidades-abertura,
+  .sobre-abertura {
+    padding: 36px 6%;
+  }
+
+  .funcionalidades-abertura h1 {
+    font-size: clamp(28px, 7.5vw, 36px);
+  }
+
+  .sobre-abertura p,
+  .sobre-conteudo p,
+  .sobre-solucao p,
+  .sobre-proposito p,
+  .funcionalidades-abertura p,
+  .funcionalidade-faixa-texto p,
+  .gc-demo__explicacao p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .gc-demo {
+    padding: 28px 4%;
+    min-height: auto;
+  }
+
+  .gc-demo .gc-demo__aparelho {
+    width: min(100%, 350px);
+  }
+
+  .gc-demo__inner {
+    gap: 28px;
+  }
+
+  .gc-demo__explicacao h2 {
+    font-size: clamp(28px, 7vw, 36px);
+  }
+
+  .gc-demo__instrucoes {
+    font-size: 16px;
+  }
+
+  .funcionalidades-recursos,
+  .funcionalidades-encerramento {
+    padding: 44px 6%;
+  }
+
+  .equipe-dados h2 {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .equipe-dados p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .contato-formulario-container {
+    min-width: 0;
+    padding: 22px 18px;
+  }
+
+  .formulario-campo input,
+  .formulario-campo textarea {
+    font-size: 16px;
+    min-height: 48px;
+  }
+}

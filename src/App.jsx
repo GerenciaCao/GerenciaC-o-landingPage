@@ -7,6 +7,7 @@ import Contato from "./assets/pages/contato";
 import Equipe from "./assets/pages/equipe";
 import Sobre from "./assets/pages/sobre";
 import Funcionalidades from "./assets/pages/funcionalidades";
+import "./mobile.css";
 
 /* ==========================================
    MENU DE NAVEGAÇÃO
